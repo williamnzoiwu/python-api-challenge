@@ -7,8 +7,11 @@ This script contains two notebooks using the OpenWeatherMap API and the Geoapify
 The WeatherPy notebook first generates a litst of cities using the citipy library. It then uses the OpenWeatherMap API to retrieve weather data from the cities list generated in the started code. After it loads all the cities it then stores them in a DataFrame, which it then exports to a csv file. Using the information from the Dataframe, it then creates four scatterplots to display the following relationships for all the cities:
 
 Latitude vs. Temperature,
+
 Latitude vs. Humidity,
+
 Latitude vs. Cloudiness,
+
 Latitude vs. Wind Speed.
 
 After creating the four plots, a linear regression model is created for each relationship. Eight more scatterplots are then created, displaying each of the four previous relationships for both the northern and southern hemispheres. These plots each include the linear regression line, the model's formula, the r values, and a description of the relationship underneath. 
@@ -19,7 +22,9 @@ This code first imports the city_data_df Dataframe from the WeatherPy notebook b
 Next another data frame is created from the city_data_df DataFrame only containing cities with certain weather conditions, ideally spots for a vacation. The new DataFrame contains only the cities with the following parameters:
 
 A max temperature lower than 30 degrees but higher than 10,
+
 Wind speed of 3 m/s or less,
+
 Zero cloudiness.
 
 After the specifications are set, the new Dataframe only keeps the City, Country, Lat, Lng, and Humidity columns.
